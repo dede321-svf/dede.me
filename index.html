@@ -1,0 +1,1068 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Dede Ripin
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    scroll-behavior: smooth; /* Untuk animasi scroll yang halus */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(13, 13, 13, 0.9);
+    z-index: 1000;
+  }
+  nav {
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    color: #bfbfbf;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    color: #3ea1f0;
+  }
+  nav a.active {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bfbfbf;
+    font-size: 14px;
+  }
+  .contact i {
+    font-size: 14px;
+  }
+  
+  /* Style untuk section */
+  section {
+    min-height: 100vh;
+    padding: 100px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #home {
+    background-color: #0f0e0eec;
+  }
+  
+  #about {
+    background-color: #1a1a1a;
+  }
+  
+  #portfolio {
+    background-color: #262626;
+  }
+  
+  #contact {
+    background-color: #333333;
+  }
+  
+  .section-content {
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .main-section {
+    display: flex;
+    height: calc(100vh - 60px);
+    padding: 0 30px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .left {
+    max-width: 380px;
+  }
+  .left h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: white;
+  }
+  .left h2 {
+    margin: 5px 0 10px 0;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+    color: white;
+  }
+  .left p {
+    margin: 0 0 30px 0;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    color: #bfbfbf;
+  }
+  .btn-group {
+    display: flex;
+    gap: 15px;
+  }
+  .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 22px;
+    border-radius: 20px;
+    border: 1.5px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: white;
+    color: #0d0d0d;
+  }
+  .btn.outline {
+    border: 1.5px solid white;
+  }
+  .btn.outline:hover {
+    background-color: white;
+    color: #0d0d0d;
+  }
+  .social-icons {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+  }
+  .social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #3ea1f0;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    max-height: 480px;
+  }
+  @media (max-width: 900px) {
+    .main-section {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 30px 20px;
+      gap: 30px;
+    }
+    .left {
+      max-width: 100%;
+      text-align: center;
+    }
+    .btn-group {
+      justify-content: center;
+    }
+    .right {
+      justify-content: center;
+    }
+    .right img {
+      max-height: 320px;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  @media (max-width: 480px) {
+    header {
+      padding: 15px 15px;
+      font-size: 12px;
+    }
+    nav {
+      gap: 15px;
+    }
+    nav a.active {
+      font-size: 14px;
+    }
+    .main-section {
+      padding: 20px 15px;
+    }
+    .left h2 {
+      font-size: 28px;
+    }
+    .left h1 {
+      font-size: 16px;
+    }
+    .left p {
+      font-size: 12px;
+    }
+    .btn {
+      font-size: 12px;
+      padding: 6px 16px;
+    }
+    .social-icons a {
+      font-size: 16px;
+    }
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+   <nav>
+    <a class="active" href="#home">
+     Home
+    </a>
+    <a href="#about">
+     About
+    </a>
+    <a href="#Data Diri">
+     Data Diri
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+   </nav>
+   <div class="contact">
+    <i class="fas fa-phone-alt">
+    </i>
+    <span>
+     
+    </span>
+   </div>
+  </header>
+  
+  <!-- Section Home -->
+  <section id="home">
+   <div class="main-section">
+    <div class="left">
+     <h1>
+      DEDE
+     </h1>
+     <h2>
+      RIPIN
+     </h2>
+     <p>
+      Programmer
+     </p>
+    <div class="right">
+     <img alt="Desk with monitor, keyboard, mouse, notebook, lamp, and plant in a dark room" height="200" src="2.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  
+  <!-- Section About -->
+<section id="about">
+  <div class="section-content">
+    <h2 class="about-title">About Me</h2>
+    <div class="about-content">
+      <p class="about-text">Saya adalah seorang <span class="highlight-word">programmer</span> yang tak hanya menulis baris-baris kode, tapi juga merancang solusi. Dengan semangat belajar tanpa henti dan rasa penasaran yang tinggi, saya percaya bahwa setiap bug adalah peluang untuk tumbuh, dan setiap proyek adalah tantangan untuk menciptakan hal luar biasa.</p>
+      
+      <p class="about-text">Saya menikmati membangun aplikasi yang bukan hanya berjalan baik, tapi juga <span class="highlight-word pulse">berdampak nyata</span> pada pengguna. Bagi saya, teknologi adalah seni dan saya senang menjadi senimannya.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Add this in your head section -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* About Section Styles */
+#about {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1f1f1f 100%);
+  padding: 120px 30px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(62, 161, 240, 0.15) 0%, transparent 50%);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #3ea1f0, #00d4ff, #3ea1f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  position: relative;
+  animation: textGlow 4s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.about-title::after {
+  content: "About Me";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: -1;
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  backdrop-filter: blur(2px);
+}
+
+.about-text {
+  font-size: 1.6rem;
+  line-height: 2.2;
+  color: rgba(240, 240, 240, 0.9);
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.about-text:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 5px 15px rgba(0, 212, 255, 0.1);
+}
+
+.highlight-word {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3ea1f0, #00d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.highlight-word::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3ea1f0, #00d4ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 3px;
+}
+
+.highlight-word:hover {
+  text-shadow: 0 0 10px rgba(62, 161, 240, 0.4);
+}
+
+.highlight-word:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.pulse {
+  position: relative;
+}
+
+.pulse::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(62, 161, 240, 0.3);
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Animations */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 15px rgba(62, 161, 240, 0.2);
+    transform: translateY(0);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(62, 161, 240, 0.4), 0 0 20px rgba(0, 212, 255, 0.3);
+    transform: translateY(-3px);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(62, 161, 240, 0.2);
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Floating particles effect */
+#about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233ea1f0' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  animation: float 30s linear infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-100px) translateX(100px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  
+  .about-text {
+    font-size: 1.3rem;
+    line-height: 1.9;
+  }
+  
+  .highlight-word {
+    font-size: 1.4rem;
+  }
+  
+  #about {
+    padding: 80px 20px;
+  }
+}
+</style>
+
+<!-- Simple Personal Data Portfolio with Photo and Hobbies -->
+<section id="portfolio" class="simple-portfolio">
+  <div class="container">
+    <h2 class="section-title">Data Diri</h2>
+    
+    <div class="profile-container">
+      <div class="profile-photo">
+        <img src="pp.jpg" alt="Dede Ripin" class="photo">
+        <div class="photo-frame"></div>
+      </div>
+      
+      <div class="personal-data">
+        <div class="data-item">
+          <span class="data-label">Nama</span>
+          <span class="data-value">Dede Ripin</span>
+        </div>
+        
+        <div class="data-item">
+          <span class="data-label">TTL</span>
+          <span class="data-value">Subang, 05 Maret 2004</span>
+        </div>
+        
+        <div class="data-item">
+          <span class="data-label">Alamat</span>
+          <span class="data-value">Kosar, Cipeundeuy, Subang</span>
+        </div>
+        
+        <div class="data-item">
+          <span class="data-label">Umur</span>
+          <span class="data-value">21</span>
+        </div>
+
+        <div class="data-item hobbies">
+          <span class="data-label">Hobi</span>
+          <div class="hobbies-list">
+            <span class="hobby-item">Programming</span>
+            <span class="hobby-item">Pencak Silat</span>
+            <span class="hobby-item">Bermain Game</span>
+            <span class="hobby-item">Bertani</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Simple Portfolio Styles */
+.simple-portfolio {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #3498db;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.profile-photo {
+  position: relative;
+  flex: 0 0 200px;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.personal-data {
+  flex: 1;
+}
+
+.data-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.data-label {
+  flex: 0 0 80px;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.data-value {
+  flex: 1;
+  color: #34495e;
+}
+
+/* Hobbies Styles */
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hobby-item {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hobbies .data-label {
+  align-self: flex-start;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-photo {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .data-item {
+    flex-direction: column;
+  }
+  
+  .data-label {
+    margin-bottom: 5px;
+  }
+  
+  .hobbies-list {
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+</style>
+
+<!-- Anda bisa menambahkan grid/galeri portfolio di sini -->
+   </div>
+  </section>
+ <!-- Enhanced Contact Section -->
+<<section id="contact">
+  <div class="contact-particles" id="contact-particles"></div>
+  <div class="section-content">
+    <h2 class="contact-title">
+      <span class="title-text">Contact Me</span>
+      <span class="title-shadow">Contact Me</span>
+    </h2>
+    <p class="contact-subtitle">Feel free to reach out for collaborations or just to say hello!</p>
+    
+    <div class="contact-cards">
+      <div class="contact-card email-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7l-8 5.3-8-5.3V6l8 5.3L20 6z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Email</h3>
+          <a href="mailto:dederipin095@gmail.com" class="contact-link">dederipin095@gmail.com</a>
+        </div>
+      </div>
+      
+      <div class="contact-card phone-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 15.5a1 1 0 0 1-1 1 17 17 0 0 1-8.6-2.3A17 17 0 0 1 3.5 5a1 1 0 0 1 1-1H7a1 1 0 0 1 1 .8c0 .2.2.5.4.7l1.5 1.5a1 1 0 0 1-.1 1.3l-1.2 1.3a13 13 0 0 0 5 5l1.3-1.2a1 1 0 0 1 1.3-.1l1.5 1.5c.2.2.5.4.7.4a1 1 0 0 1 .8 1z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Phone</h3>
+          <a href="https://wa.me/081572128187" class="contact-link">081572128187</a>
+        </div>
+      </div>
+      
+      <div class="contact-card location-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Location</h3>
+          <a href="https://www.google.com/maps/place/6%C2%B027'30.4%22S+107%C2%B038'05.0%22E/@-6.4584404,107.6321447,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.4584404!4d107.6347196?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">
+            Kosar, Cipendeuy<br>
+            Subang
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Font & Icon Imports -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<style>
+<style>
+/* Contact Section Styles */
+#contact {
+  position: relative;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  padding: 100px 20px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.contact-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title Styles */
+.contact-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  perspective: 1000px;
+}
+
+.title-text {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #3ea1f0, #00d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  z-index: 2;
+  animation: titleFloat 6s ease-in-out infinite;
+}
+
+.title-shadow {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  font-family: 'Playfair Display', serif;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Contact Cards */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(62, 161, 240, 0.1) 0%,
+    rgba(0, 212, 255, 0.05) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  z-index: -1;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(62, 161, 240, 0.3);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(62, 161, 240, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(62, 161, 240, 0.3);
+}
+
+.card-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #3ea1f0;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #3ea1f0;
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+/* Location Map Styles */
+.location-map {
+  margin-top: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.share-location {
+  margin-top: 30px;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.share-button:hover {
+  background: rgba(62, 161, 240, 0.3);
+  transform: translateY(-3px);
+}
+
+.share-button svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+/* Animations */
+@keyframes titleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title .title-text,
+  .contact-title .title-shadow {
+    font-size: 2.5rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact-card {
+    min-width: 100%;
+  }
+  
+  #contact {
+    padding: 70px 20px;
+  }
+  
+  .share-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Particles.js Styles */
+#contact-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+</style>
+  <script>
+   // JavaScript untuk mengupdate active nav link saat scroll
+   document.addEventListener('DOMContentLoaded', function() {
+       const sections = document.querySelectorAll('section');
+       const navLinks = document.querySelectorAll('nav a');
+       
+       window.addEventListener('scroll', function() {
+           let current = '';
+           
+           sections.forEach(section => {
+               const sectionTop = section.offsetTop;
+               const sectionHeight = section.clientHeight;
+               
+               if (pageYOffset >= (sectionTop - 100)) {
+                   current = section.getAttribute('id');
+               }
+           });
+           
+           navLinks.forEach(link => {
+               link.classList.remove('active');
+               if (link.getAttribute('href') === '#' + current) {
+                   link.classList.add('active');
+               }
+           });
+       });
+   });
+  </script>
+ </body>
+</html>
